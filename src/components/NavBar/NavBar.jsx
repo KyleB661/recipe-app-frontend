@@ -15,8 +15,10 @@ const NavBar = () => {
         <nav>
             {user ? (
                  <ul>
-                    <li>Welcome, {user.username}</li>
-                    <li><Link to='/'>Dashboard</Link></li>
+                    <h1>Welcome, {user.username}</h1>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/recipes'>Recipes</Link></li>
+                    <li><Link to='/recipes/new'>Add a recipe</Link></li>
                     <li><Link to='/' onClick={handleSignOut}>Sign Out</Link></li>
                 </ul>
             ) : (
