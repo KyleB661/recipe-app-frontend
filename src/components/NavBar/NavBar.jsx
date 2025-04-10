@@ -15,7 +15,6 @@ const NavBar = () => {
         <nav>
             {user ? (
                  <ul>
-                    <h1>Welcome, {user.username}</h1>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/recipes'>Recipes</Link></li>
                     <li><Link to='/recipes/new'>Add a recipe</Link></li>

@@ -2,10 +2,10 @@ import { Link } from 'react-router'
 
 const RecipeList = ({ recipes }) => {
     return (
-        <main>
+        <main className='recipeGrid'>
           {recipes.map((recipe) => (
             <Link key={recipe._id} to={`/recipes/${recipe._id}`}>
-              <article>
+              <article className='recipeCard'>
                 <header>
                   <h2>{recipe.title}</h2>
                   <p>

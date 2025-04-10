@@ -58,41 +58,42 @@ const RecipeDetails = ({handleDeleteRecipe}) => {
   if (!recipe) return <h1>Recipe not found</h1>
 
   return (
-    <main>
+    <main className='recipeDetails'>
       <h1>{recipe.title}</h1>
       <p>{recipe.description}</p>
 
       {recipe.ingredients && recipe.ingredients.length > 0 && (
-        <>
+        <div className='recipeIngredients'>
           <h2>Ingredients:</h2>
-          <ul>
+          <ul className='ingredientsList'>
             {recipe.ingredients.map((ingredient, i) => (
               <li key={i}>
                 {ingredient.amount} {ingredient.unit} {ingredient.name}
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
 
       {recipe.instructions && recipe.instructions.length > 0 && (
-        <>
+        <div className='recipeInstructions'>
           <h2>Instructions:</h2>
           <ol>
             {recipe.instructions.map((instruction, i) => (
               <li key={i}>{instruction}</li>
             ))}
           </ol>
-        </>
+        </div>
       )}
 
-      <div>
+      <div className='recipeInfo'>
+      <h2>Recipe Information:</h2>
         {recipe.prepTime && <p>Prep Time: {recipe.prepTime} minutes</p>}
         {recipe.cookTime && <p>Cook Time: {recipe.cookTime} minutes</p>}
         {recipe.servings && <p>Servings: {recipe.servings}</p>}
       </div>
 
-      <div>
+      <div className='recipeInfo'>
         <button onClick={() => navigate(`/recipes/${recipeId}/edit`)}>
           Edit Recipe
         </button>
