@@ -60,7 +60,7 @@ const RecipeDetails = ({handleDeleteRecipe}) => {
   return (
     <main className='recipeDetails'>
       <h1>{recipe.title}</h1>
-      <p>{recipe.description}</p>
+      <p className='recipeDescription'>{recipe.description}</p>
 
       {recipe.ingredients && recipe.ingredients.length > 0 && (
         <div className='recipeIngredients'>
@@ -122,7 +122,7 @@ const RecipeDetails = ({handleDeleteRecipe}) => {
                   <>
                     <p>Rating: {'⭐'.repeat(Number(comment.rating))}</p>
                     <p>{comment.content}</p>
-                    <p>- {comment.author?.username}</p>
+                    <p>Author - {comment.author?.username}</p>
                     {user?._id === comment.author?._id && (
                       <>
                         <button onClick={() => handleEditComment(comment._id)}>

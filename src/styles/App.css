@@ -16,8 +16,6 @@ body {
   flex-direction: column;
 }
 
-
-
 nav {
   background-color: #00b894;
   padding: 15px;
@@ -122,12 +120,21 @@ button:hover {
   transform: translateY(-2px);
 }
 
+.recipeDescription {
+  text-align: center;
+  margin: 10px 0;
+  padding: 0 15px;
+  color: #2d3436;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 600px;
+}
+
 .recipeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
-  /* width: 100%; */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -205,37 +212,6 @@ h1 {
   font-size: 18px;
 }
 
-.recipe-actions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.comment-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.success-message {
-  background-color: #00b894;
-  color: white;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.error-message {
-  background-color: #ff7675;
-  color: white;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 .recipeIngredients {
   width: auto;
 }
@@ -243,4 +219,95 @@ h1 {
 .ingredientsList {
   width: auto;
   list-style-position: inside;
+}
+
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.landingPage h1 {
+  font-size: 26px;
+  color: #00b894;
+  margin-bottom: 20px;
+}
+
+.tagLine {
+  font-size: 18px;
+  color: #00b894;
+  margin-bottom: 40px;
+}
+
+.landingButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.landingButton {
+  padding: 12px 24px;
+  background-color: #00b894;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.landingButtonTwo {
+  padding: 12px 24px;
+  background-color: #00b894;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 2px solid #00b894;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dashboard h1 {
+  color: #00b894;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.dashboardTag {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 2;
+}
+
+.userListTitle {
+  color: #00b894;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.userList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.userList p {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

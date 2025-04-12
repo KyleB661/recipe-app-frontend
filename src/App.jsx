@@ -69,6 +69,7 @@ const App = () => {
             <Route path="/sign-in" element={<SignInForm />} />
           </>
         )}
+        <Route path='*' element={<Landing />} />
       </Routes>
     </>
   )

@@ -20,12 +20,22 @@ const Dashboard = () => {
   }, [user]);
 
   return (
-    <main>
-      <h1>Welcome, {user.username}</h1>
-      {users.map((user, index) => ( 
-        <p key={index}>{user.username}</p> 
-      ))}
-      <p>This dashboard page is for you to see all users</p>
+    <main className='dashboard'>
+      <div className="dashboard-header">
+        <h1>Welcome, {user.username}!</h1>
+        <p className='dashboardTag'>
+          This is my recipe app! A place to share recipes with others or look for inspiration for yourself!
+        </p>
+      </div>
+
+      <section className="dashboard-users">
+        <h2 className='userListTitle'>Current users:</h2>
+        <div className='userList'>
+          {users.map((user, index) => ( 
+            <p key={index}>{user.username}</p> 
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

@@ -1,8 +1,14 @@
+import { Link } from 'react-router'
+
 const Landing = () => {
     return (
-      <main>
-        <h1>Hello, you are on the landing page for visitors.</h1>
-        <p>Sign up now, or sign in to see your super secret dashboard!</p>
+      <main className="landingPage">
+        <h1>Welcome to Recipe share!</h1>
+        <h2 className="tagLine">Discover, Create, and Share Your Favorite Recipes</h2>
+        <div className="landingButtons">
+          <Link to="/sign-up" className="landingButton">Get Started</Link>
+          <Link to="/sign-in" className="landingButtonTwo">Sign In</Link>
+        </div>
       </main>
     );
   };
